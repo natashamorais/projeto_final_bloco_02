@@ -30,7 +30,7 @@ export class CategoriaController {
     return this.categoriaService.post(categoria);
   }
 
-  @Put()
+  @Put('/:id')
   @HttpCode(HttpStatus.OK)
   update(@Body() categoria: Categoria): Promise<Categoria> {
     return this.categoriaService.put(categoria);
